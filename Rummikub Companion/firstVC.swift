@@ -8,16 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class firstVC: UIViewController {
+    
+    //MARK:Actions
+    @IBAction func newGamePressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "newGameVC", sender:sender)
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

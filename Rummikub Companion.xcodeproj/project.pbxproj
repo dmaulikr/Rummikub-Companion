@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		5C12AE481E78FB8E00DD7424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE471E78FB8E00DD7424 /* AppDelegate.swift */; };
-		5C12AE4A1E78FB8E00DD7424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE491E78FB8E00DD7424 /* ViewController.swift */; };
+		5C12AE4A1E78FB8E00DD7424 /* firstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE491E78FB8E00DD7424 /* firstVC.swift */; };
 		5C12AE4D1E78FB8E00DD7424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C12AE4B1E78FB8E00DD7424 /* Main.storyboard */; };
 		5C12AE501E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE4E1E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld */; };
 		5C12AE521E78FB8E00DD7424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C12AE511E78FB8E00DD7424 /* Assets.xcassets */; };
 		5C12AE551E78FB8E00DD7424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C12AE531E78FB8E00DD7424 /* LaunchScreen.storyboard */; };
 		5C12AE601E78FB8E00DD7424 /* Rummikub_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE5F1E78FB8E00DD7424 /* Rummikub_CompanionTests.swift */; };
+		5C12AE6E1E78FCB100DD7424 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE6D1E78FCB100DD7424 /* Score.swift */; };
+		5C12AE701E78FCED00DD7424 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE6F1E78FCED00DD7424 /* Player.swift */; };
+		5C12AE721E79070400DD7424 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE711E79070400DD7424 /* Round.swift */; };
+		5C12AE741E79079800DD7424 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE731E79079800DD7424 /* Brain.swift */; };
+		5C12AE781E79F09A00DD7424 /* newGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE771E79F09A00DD7424 /* newGameVC.swift */; };
+		5CD863211E7DC0370048FB8E /* PlayerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */; };
+		5CF23B621EC0BB8500029F10 /* turnsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF23B611EC0BB8500029F10 /* turnsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +36,7 @@
 /* Begin PBXFileReference section */
 		5C12AE441E78FB8E00DD7424 /* Rummikub Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rummikub Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C12AE471E78FB8E00DD7424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C12AE491E78FB8E00DD7424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C12AE491E78FB8E00DD7424 /* firstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstVC.swift; sourceTree = "<group>"; };
 		5C12AE4C1E78FB8E00DD7424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C12AE4F1E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rummikub_Companion.xcdatamodel; sourceTree = "<group>"; };
 		5C12AE511E78FB8E00DD7424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +45,13 @@
 		5C12AE5B1E78FB8E00DD7424 /* Rummikub CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rummikub CompanionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C12AE5F1E78FB8E00DD7424 /* Rummikub_CompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rummikub_CompanionTests.swift; sourceTree = "<group>"; };
 		5C12AE611E78FB8E00DD7424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C12AE6D1E78FCB100DD7424 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		5C12AE6F1E78FCED00DD7424 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5C12AE711E79070400DD7424 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		5C12AE731E79079800DD7424 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		5C12AE771E79F09A00DD7424 /* newGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newGameVC.swift; sourceTree = "<group>"; };
+		5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNameTableViewCell.swift; sourceTree = "<group>"; };
+		5CF23B611EC0BB8500029F10 /* turnsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = turnsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +93,10 @@
 		5C12AE461E78FB8E00DD7424 /* Rummikub Companion */ = {
 			isa = PBXGroup;
 			children = (
+				5C12AE6A1E78FBF800DD7424 /* Model */,
+				5C12AE6B1E78FC0700DD7424 /* View */,
+				5C12AE6C1E78FC0F00DD7424 /* Controller */,
 				5C12AE471E78FB8E00DD7424 /* AppDelegate.swift */,
-				5C12AE491E78FB8E00DD7424 /* ViewController.swift */,
 				5C12AE4B1E78FB8E00DD7424 /* Main.storyboard */,
 				5C12AE511E78FB8E00DD7424 /* Assets.xcassets */,
 				5C12AE531E78FB8E00DD7424 /* LaunchScreen.storyboard */,
@@ -97,6 +113,35 @@
 				5C12AE611E78FB8E00DD7424 /* Info.plist */,
 			);
 			path = "Rummikub CompanionTests";
+			sourceTree = "<group>";
+		};
+		5C12AE6A1E78FBF800DD7424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C12AE6D1E78FCB100DD7424 /* Score.swift */,
+				5C12AE6F1E78FCED00DD7424 /* Player.swift */,
+				5C12AE711E79070400DD7424 /* Round.swift */,
+				5C12AE731E79079800DD7424 /* Brain.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5C12AE6B1E78FC0700DD7424 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5C12AE6C1E78FC0F00DD7424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C12AE491E78FB8E00DD7424 /* firstVC.swift */,
+				5C12AE771E79F09A00DD7424 /* newGameVC.swift */,
+				5CF23B611EC0BB8500029F10 /* turnsVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +250,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C12AE501E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld in Sources */,
-				5C12AE4A1E78FB8E00DD7424 /* ViewController.swift in Sources */,
+				5C12AE6E1E78FCB100DD7424 /* Score.swift in Sources */,
+				5CD863211E7DC0370048FB8E /* PlayerNameTableViewCell.swift in Sources */,
+				5C12AE4A1E78FB8E00DD7424 /* firstVC.swift in Sources */,
+				5C12AE701E78FCED00DD7424 /* Player.swift in Sources */,
+				5C12AE741E79079800DD7424 /* Brain.swift in Sources */,
+				5C12AE721E79070400DD7424 /* Round.swift in Sources */,
 				5C12AE481E78FB8E00DD7424 /* AppDelegate.swift in Sources */,
+				5C12AE781E79F09A00DD7424 /* newGameVC.swift in Sources */,
+				5CF23B621EC0BB8500029F10 /* turnsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +468,7 @@
 				5C12AE661E78FB8E00DD7424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C12AE671E78FB8E00DD7424 /* Build configuration list for PBXNativeTarget "Rummikub CompanionTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +477,7 @@
 				5C12AE691E78FB8E00DD7424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
