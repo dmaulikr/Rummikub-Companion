@@ -17,6 +17,10 @@ class Score{
         self.total = 0
     }
     
+    init (total : Int){
+        self.total = total
+    }
+    
     func add(x:Int){
         self.total += x
     }
