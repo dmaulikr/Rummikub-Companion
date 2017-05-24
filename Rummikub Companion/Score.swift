@@ -21,11 +21,11 @@ class Score{
         self.total = total
     }
     
-    func add(x:Int){
-        self.total += x
+    func add(value:Int){
+        self.total += value
     }
     
-    func subtract(x:Int){
-        self.total -= x
+    func subtract(value:Int){
+        self.total -= value
     }
 }

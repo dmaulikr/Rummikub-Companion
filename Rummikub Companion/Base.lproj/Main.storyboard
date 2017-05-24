@@ -334,7 +334,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fx-hb-GWa">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Round Score" id="mZF-Ve-CIR"/>
+                                    <navigationItem title="Enter remaining pieces for:" id="mZF-Ve-CIR"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-yb-XhV">
@@ -342,12 +342,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="sAj-2B-Uh6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Pieces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejO-mZ-nD2">
-                                <rect key="frame" x="120.5" y="72.5" width="135" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -500,21 +494,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-1s-jKR">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
                                         <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="prevBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="wd4-eS-zZB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-5V-2bg">
                                         <rect key="frame" x="101" y="0.0" width="101" height="30"/>
                                         <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="6fw-ky-U75"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-RE-XKx">
                                         <rect key="frame" x="202" y="0.0" width="101" height="30"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="k3o-WY-ygR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="oIX-hY-cF3"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-3C-Sp1">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-3C-Sp1">
                                 <rect key="frame" x="36" y="504" width="303" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-wf-6s6">
@@ -545,7 +548,7 @@
                             <constraint firstItem="5fx-hb-GWa" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leading" id="7S4-vR-xUq"/>
                             <constraint firstItem="kuM-3C-Sp1" firstAttribute="top" secondItem="GP7-Lf-a1Q" secondAttribute="bottom" constant="8" id="8Vf-4H-yKc"/>
                             <constraint firstItem="KSQ-Vd-pRc" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leadingMargin" constant="20" id="AGs-XA-LrG"/>
-                            <constraint firstItem="GP7-Lf-a1Q" firstAttribute="top" secondItem="ejO-mZ-nD2" secondAttribute="bottom" constant="8" id="Mzp-4E-bWu"/>
+                            <constraint firstItem="GP7-Lf-a1Q" firstAttribute="top" secondItem="d9b-yb-XhV" secondAttribute="bottom" constant="8" id="Qq8-MQ-zGC"/>
                             <constraint firstItem="5fx-hb-GWa" firstAttribute="top" secondItem="PjD-uC-hLi" secondAttribute="top" constant="20" id="T6q-Nx-SNZ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GP7-Lf-a1Q" secondAttribute="leading" id="a7N-Ya-mvn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GP7-Lf-a1Q" secondAttribute="trailing" id="cu6-CK-c4O"/>
@@ -554,12 +557,12 @@
                             <constraint firstAttribute="trailing" secondItem="5fx-hb-GWa" secondAttribute="trailing" id="sJH-eC-0hQ"/>
                             <constraint firstItem="kuM-3C-Sp1" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leadingMargin" constant="20" id="uxt-e4-hhW"/>
                             <constraint firstItem="KSQ-Vd-pRc" firstAttribute="top" secondItem="kuM-3C-Sp1" secondAttribute="bottom" constant="8" id="waJ-Pj-EAm"/>
-                            <constraint firstItem="ejO-mZ-nD2" firstAttribute="leading" secondItem="d9b-yb-XhV" secondAttribute="trailing" constant="8" id="xos-aJ-jS6"/>
-                            <constraint firstItem="ejO-mZ-nD2" firstAttribute="baseline" secondItem="d9b-yb-XhV" secondAttribute="baseline" id="yJg-9I-QRk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="vxT-RE-XKx" id="rL3-22-Uj8"/>
                         <outlet property="playerNameLbl" destination="d9b-yb-XhV" id="fdz-yc-kYG"/>
+                        <outlet property="previousBtn" destination="So2-1s-jKR" id="9DR-4e-BfK"/>
                         <outlet property="totalRemainingPtsLbl" destination="X9m-wY-JpR" id="LwR-2w-fsa"/>
                     </connections>
                 </viewController>
