@@ -12,9 +12,17 @@ class calculateScoreVC: UIViewController {
     
     //MARK: Properties
     var players = [Player]()
-    var runningRemainingPiecesArr = [Int]()
+    var runningRemainingPiecesArr = [Int](repeatElement(0, count: 2))//will have subscript respective to players and hold the respective running remaining pieces value
     var winner = Int()
-    var currentPlayerForCalc = 0 //begin calculating with the first player
+    var _currentPlayerForCalc = Int()
+    var currentPlayerForCalc : Int{
+        get{
+            return _currentPlayerForCalc
+        }set{
+            self._currentPlayerForCalc = newValue
+            self.totalRemainingPtsLbl.text = String(runningRemainingPiecesArr[newValue])
+        }
+    }
     
     @IBOutlet weak var playerNameLbl: UILabel!
     @IBOutlet weak var totalRemainingPtsLbl: UILabel!
@@ -28,6 +36,9 @@ class calculateScoreVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //initialize currentPlayerForCalc
+        currentPlayerForCalc = 0
+        
         //initialize runningRemainingPiecesArr
         runningRemainingPiecesArr = [Int](repeatElement(0, count: players.count))
         
@@ -36,12 +47,12 @@ class calculateScoreVC: UIViewController {
         
         //check if the first player in arr is the winner
         //if so, skip it
-        if currentPlayerForCalc == winner{
+        if currentPlayerIsTheWinner(){
             currentPlayerForCalc += 1
         }
         
         //set top label with first loser player's name
-        playerNameLbl.text = "Enter all \(players[currentPlayerForCalc].name)'s"
+        playerNameLbl.text = "\(players[currentPlayerForCalc].name)"
         
         //if there's only 2 players, disable nextBtn
         if players.count == 2{
@@ -66,7 +77,14 @@ class calculateScoreVC: UIViewController {
     }
     
     @IBAction func prevBtnPressed(_ sender: UIButton) {
-        
+        self.currentPlayerForCalc -= 1
+        playerNameLbl.text = players[currentPlayerForCalc].name
+        if self.currentPlayerIsTheFirst(){
+            self.previousBtn.isEnabled = false
+        }
+        if !self.nextBtn.isEnabled && !currentPlayerIsTheLast(){
+            self.nextBtn.isEnabled = true
+        }
     }
     
     @IBAction func resetBtnPressed(_ sender: UIButton) {
@@ -74,16 +92,48 @@ class calculateScoreVC: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
+        self.currentPlayerForCalc += 1
+        playerNameLbl.text = players[currentPlayerForCalc].name
+        if self.currentPlayerIsTheLast(){
+            self.nextBtn.isEnabled = false
+        }
+        if !self.previousBtn.isEnabled && !currentPlayerIsTheFirst(){
+            self.previousBtn.isEnabled = true
+        }
     }
     
     func resetTotalRemaining(){
         runningRemainingPiecesArr[currentPlayerForCalc] = 0
-        totalRemainingPtsLbl.text = "0"
+        self.totalRemainingPtsLbl.text = "0"
     }
     
     func addRemainingPiecesForCurrentPlayer(value : Int){
         runningRemainingPiecesArr[currentPlayerForCalc] += value
         totalRemainingPtsLbl.text = String(runningRemainingPiecesArr[currentPlayerForCalc])
+    }
+    
+    func currentPlayerIsTheLast() -> Bool{
+        if currentPlayerForCalc == players.count - 1{
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func currentPlayerIsTheFirst() -> Bool{
+        if currentPlayerForCalc == 0{
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func currentPlayerIsTheWinner() -> Bool{
+        if currentPlayerForCalc == winner{
+            return true
+        }else{
+            return false
+        }
     }
     
 }

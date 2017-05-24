@@ -338,7 +338,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-yb-XhV">
-                                <rect key="frame" x="16" y="72" width="96.5" height="21"/>
+                                <rect key="frame" x="139.5" y="72" width="96.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="sAj-2B-Uh6"/>
                                 </constraints>
@@ -517,7 +517,7 @@
                                     <constraint firstAttribute="height" constant="30" id="oIX-hY-cF3"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-3C-Sp1">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-3C-Sp1">
                                 <rect key="frame" x="36" y="504" width="303" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-wf-6s6">
@@ -544,7 +544,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="KSQ-Vd-pRc" secondAttribute="trailing" constant="20" id="1Tv-RN-WHN"/>
-                            <constraint firstItem="d9b-yb-XhV" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leadingMargin" id="3AG-Ie-TE6"/>
                             <constraint firstItem="5fx-hb-GWa" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leading" id="7S4-vR-xUq"/>
                             <constraint firstItem="kuM-3C-Sp1" firstAttribute="top" secondItem="GP7-Lf-a1Q" secondAttribute="bottom" constant="8" id="8Vf-4H-yKc"/>
                             <constraint firstItem="KSQ-Vd-pRc" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leadingMargin" constant="20" id="AGs-XA-LrG"/>
@@ -555,6 +554,7 @@
                             <constraint firstItem="d9b-yb-XhV" firstAttribute="top" secondItem="5fx-hb-GWa" secondAttribute="bottom" constant="8" id="hMr-d8-HjE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kuM-3C-Sp1" secondAttribute="trailing" constant="20" id="qOC-6V-WK7"/>
                             <constraint firstAttribute="trailing" secondItem="5fx-hb-GWa" secondAttribute="trailing" id="sJH-eC-0hQ"/>
+                            <constraint firstItem="d9b-yb-XhV" firstAttribute="centerX" secondItem="PjD-uC-hLi" secondAttribute="centerX" id="tO2-dw-bZl"/>
                             <constraint firstItem="kuM-3C-Sp1" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leadingMargin" constant="20" id="uxt-e4-hhW"/>
                             <constraint firstItem="KSQ-Vd-pRc" firstAttribute="top" secondItem="kuM-3C-Sp1" secondAttribute="bottom" constant="8" id="waJ-Pj-EAm"/>
                         </constraints>
