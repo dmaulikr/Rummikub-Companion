@@ -492,24 +492,31 @@
                                 <rect key="frame" x="36" y="557" width="303" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-1s-jKR">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
                                         <state key="normal" title="Previous"/>
                                         <connections>
                                             <action selector="prevBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="wd4-eS-zZB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-5V-2bg">
-                                        <rect key="frame" x="101" y="0.0" width="101" height="30"/>
+                                        <rect key="frame" x="76" y="0.0" width="75.5" height="30"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
                                             <action selector="resetBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="6fw-ky-U75"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-RE-XKx">
-                                        <rect key="frame" x="202" y="0.0" width="101" height="30"/>
+                                        <rect key="frame" x="151.5" y="0.0" width="76" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="nextBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="k3o-WY-ygR"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-5a-cUb">
+                                        <rect key="frame" x="227.5" y="0.0" width="75.5" height="30"/>
+                                        <state key="normal" title="Finish"/>
+                                        <connections>
+                                            <action selector="finishBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="mHH-cM-XeC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -560,15 +567,35 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="finishBtn" destination="ezV-5a-cUb" id="jxI-ce-52g"/>
                         <outlet property="nextBtn" destination="vxT-RE-XKx" id="rL3-22-Uj8"/>
                         <outlet property="playerNameLbl" destination="d9b-yb-XhV" id="fdz-yc-kYG"/>
                         <outlet property="previousBtn" destination="So2-1s-jKR" id="9DR-4e-BfK"/>
                         <outlet property="totalRemainingPtsLbl" destination="X9m-wY-JpR" id="LwR-2w-fsa"/>
+                        <segue destination="PFJ-yQ-yOB" kind="show" identifier="calculateScoreVCReviewScoreVC" id="Z2a-Dr-uSc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mtx-PC-nZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2964" y="42.728635682158924"/>
+        </scene>
+        <!--Review ScoresVC-->
+        <scene sceneID="GQQ-GN-fQi">
+            <objects>
+                <viewController id="PFJ-yQ-yOB" customClass="ReviewScoresVC" customModule="Rummikub_Companion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D8y-OS-RCs"/>
+                        <viewControllerLayoutGuide type="bottom" id="3jN-zI-MtU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F3E-81-usj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LC0-WB-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3619" y="44"/>
         </scene>
     </scenes>
 </document>

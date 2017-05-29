@@ -28,6 +28,8 @@ class calculateScoreVC: UIViewController {
     @IBOutlet weak var totalRemainingPtsLbl: UILabel!
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var finishBtn: UIButton!
+    
     
     
 
@@ -56,11 +58,13 @@ class calculateScoreVC: UIViewController {
         
         //if there's only 2 players, disable nextBtn
         if players.count == 2{
-            self.nextBtn.isEnabled = false
+            self.nextBtn.isHidden = true
+            self.finishBtn.isHidden = false
         }
         
         //disable previousBtn since this is the first loser player
         self.previousBtn.isEnabled = false
+        
         
     }
     
@@ -82,8 +86,9 @@ class calculateScoreVC: UIViewController {
         if self.currentPlayerIsTheFirst(){
             self.previousBtn.isEnabled = false
         }
-        if !self.nextBtn.isEnabled && !currentPlayerIsTheLast(){
-            self.nextBtn.isEnabled = true
+        if self.nextBtn.isHidden && !currentPlayerIsTheLast(){
+            self.nextBtn.isHidden = false
+            self.finishBtn.isHidden = true
         }
     }
     
@@ -95,11 +100,23 @@ class calculateScoreVC: UIViewController {
         self.currentPlayerForCalc += 1
         playerNameLbl.text = players[currentPlayerForCalc].name
         if self.currentPlayerIsTheLast(){
-            self.nextBtn.isEnabled = false
+            self.nextBtn.isHidden = true
+            self.finishBtn.isHidden = false
         }
         if !self.previousBtn.isEnabled && !currentPlayerIsTheFirst(){
             self.previousBtn.isEnabled = true
         }
+    }
+    
+    @IBAction func finishBtnPressed(_ sender: UIButton) {
+        for (index, element) in self.players.enumerated(){
+            if index != self.winner{
+               element.score.subtract(value: self.runningRemainingPiecesArr[index])
+               self.players[self.winner].score.add(value: self.runningRemainingPiecesArr[index])
+            }
+        }
+        
+        performSegue(withIdentifier: "calculateScoreVCReviewScoreVC", sender: players)
     }
     
     func resetTotalRemaining(){
@@ -133,6 +150,15 @@ class calculateScoreVC: UIViewController {
             return true
         }else{
             return false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ReviewScoresVC{
+            if let players = sender as? [Player]{
+                destination.players = players
+                print("prepared sucessfully")
+            }
         }
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class Score{
     //MARK:Properties
-    private var total : Int
+    var total : Int
     
     //MARK:Methods
     init(){
@@ -27,5 +27,9 @@ class Score{
     
     func subtract(value:Int){
         self.total -= value
+    }
+    
+    func getTotal() -> Int{
+        return self.total
     }
 }

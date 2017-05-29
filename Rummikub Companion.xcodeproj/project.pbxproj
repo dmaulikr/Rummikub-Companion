@@ -21,6 +21,7 @@
 		5C12AE781E79F09A00DD7424 /* newGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE771E79F09A00DD7424 /* newGameVC.swift */; };
 		5C537D3F1ECA59050045DD69 /* winnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C537D3E1ECA59050045DD69 /* winnerVC.swift */; };
 		5C537D411ECA6BCE0045DD69 /* calculateScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C537D401ECA6BCE0045DD69 /* calculateScoreVC.swift */; };
+		5CA644931EDCD99B0031C52A /* ReviewScoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA644921EDCD99B0031C52A /* ReviewScoresVC.swift */; };
 		5CD863211E7DC0370048FB8E /* PlayerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */; };
 		5CF23B621EC0BB8500029F10 /* turnsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF23B611EC0BB8500029F10 /* turnsVC.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		5C12AE771E79F09A00DD7424 /* newGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newGameVC.swift; sourceTree = "<group>"; };
 		5C537D3E1ECA59050045DD69 /* winnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winnerVC.swift; sourceTree = "<group>"; };
 		5C537D401ECA6BCE0045DD69 /* calculateScoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculateScoreVC.swift; sourceTree = "<group>"; };
+		5CA644921EDCD99B0031C52A /* ReviewScoresVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewScoresVC.swift; path = ../ReviewScoresVC.swift; sourceTree = "<group>"; };
 		5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNameTableViewCell.swift; sourceTree = "<group>"; };
 		5CF23B611EC0BB8500029F10 /* turnsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = turnsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 		5C12AE6C1E78FC0F00DD7424 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5CA644921EDCD99B0031C52A /* ReviewScoresVC.swift */,
 				5C12AE491E78FB8E00DD7424 /* firstVC.swift */,
 				5C12AE771E79F09A00DD7424 /* newGameVC.swift */,
 				5C537D401ECA6BCE0045DD69 /* calculateScoreVC.swift */,
@@ -264,6 +267,7 @@
 				5C12AE721E79070400DD7424 /* Round.swift in Sources */,
 				5C12AE481E78FB8E00DD7424 /* AppDelegate.swift in Sources */,
 				5C537D411ECA6BCE0045DD69 /* calculateScoreVC.swift in Sources */,
+				5CA644931EDCD99B0031C52A /* ReviewScoresVC.swift in Sources */,
 				5C12AE781E79F09A00DD7424 /* newGameVC.swift in Sources */,
 				5C537D3F1ECA59050045DD69 /* winnerVC.swift in Sources */,
 				5CF23B621EC0BB8500029F10 /* turnsVC.swift in Sources */,
