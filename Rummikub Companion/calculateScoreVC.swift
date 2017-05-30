@@ -81,9 +81,15 @@ class calculateScoreVC: UIViewController {
     }
     
     @IBAction func prevBtnPressed(_ sender: UIButton) {
-        self.currentPlayerForCalc -= 1
+        //check whether previous player is the winner or not and manage as expected
+        if self.currentPlayerForCalc-1 == self.winner{
+            self.currentPlayerForCalc -= 2
+        }else{
+            self.currentPlayerForCalc -= 1
+        }
+        
         playerNameLbl.text = players[currentPlayerForCalc].name
-        if self.currentPlayerIsTheFirst(){
+        if self.currentPlayerIsTheFirst() || self.currentPlayerForCalc-1 == self.winner{
             self.previousBtn.isEnabled = false
         }
         if self.nextBtn.isHidden && !currentPlayerIsTheLast(){
@@ -97,9 +103,14 @@ class calculateScoreVC: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
-        self.currentPlayerForCalc += 1
+        //check whether next player is the winner or not and manage as expected
+        if self.currentPlayerForCalc+1 == self.winner{
+            self.currentPlayerForCalc += 2
+        }else{
+            self.currentPlayerForCalc += 1
+        }
         playerNameLbl.text = players[currentPlayerForCalc].name
-        if self.currentPlayerIsTheLast(){
+        if self.currentPlayerIsTheLast() || self.currentPlayerForCalc+1 == self.winner{
             self.nextBtn.isHidden = true
             self.finishBtn.isHidden = false
         }
