@@ -10,18 +10,26 @@ import UIKit
 
 class Score{
     //MARK:Properties
-    private var total : Int
+    var total : Int
     
     //MARK:Methods
     init(){
         self.total = 0
     }
     
-    func add(x:Int){
-        self.total += x
+    init (total : Int){
+        self.total = total
     }
     
-    func subtract(x:Int){
-        self.total -= x
+    func add(value:Int){
+        self.total += value
+    }
+    
+    func subtract(value:Int){
+        self.total -= value
+    }
+    
+    func getTotal() -> Int{
+        return self.total
     }
 }

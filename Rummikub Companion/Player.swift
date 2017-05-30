@@ -18,6 +18,11 @@ class Player{
     
     //MARK:Methods
     
+    init(){
+        self.name = "undefined"
+        self.score = Score()
+    }
+    
     init(name: String){
         self.name = name
         self.score = Score()

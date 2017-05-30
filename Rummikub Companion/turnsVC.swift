@@ -98,5 +98,18 @@ class turnsVC: UIViewController {
         self.performSegue(withIdentifier: "TurnsVCFirstVC", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? winnerVC{
+            if let players = sender as? [Player]{
+                destination.players = players
+            }
+        }
+    }
+    
+    @IBAction func finishRoundBtnPressed(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "turnsVCwinnerVC", sender: players)
+    }
+    
+    
 
 }
