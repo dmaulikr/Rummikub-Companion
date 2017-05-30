@@ -14,11 +14,6 @@ class ReviewScoresVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("debug")
-        for p : Player in players {
-            print("\(p.name) : \(p.score.getTotal())")
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {

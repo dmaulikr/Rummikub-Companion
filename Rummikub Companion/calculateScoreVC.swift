@@ -120,14 +120,26 @@ class calculateScoreVC: UIViewController {
     }
     
     @IBAction func finishBtnPressed(_ sender: UIButton) {
-        for (index, element) in self.players.enumerated(){
-            if index != self.winner{
-               element.score.subtract(value: self.runningRemainingPiecesArr[index])
-               self.players[self.winner].score.add(value: self.runningRemainingPiecesArr[index])
-            }
-        }
         
-        performSegue(withIdentifier: "calculateScoreVCReviewScoreVC", sender: players)
+        let alertController = UIAlertController(title: "Finish Round Score", message: "Confirm end of round score calculation?", preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
+            for (index, element) in self.players.enumerated(){
+                if index != self.winner{
+                    element.score.subtract(value: self.runningRemainingPiecesArr[index])
+                    self.players[self.winner].score.add(value: self.runningRemainingPiecesArr[index])
+                }
+            }
+            
+            self.performSegue(withIdentifier: "calculateScoreVCReviewScoreVC", sender: self.players)
+            }
+        
+        let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
+        
+        alertController.addAction(OKAction)
+        alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
     }
     
     func resetTotalRemaining(){
@@ -168,7 +180,6 @@ class calculateScoreVC: UIViewController {
         if let destination = segue.destination as? ReviewScoresVC{
             if let players = sender as? [Player]{
                 destination.players = players
-                print("prepared sucessfully")
             }
         }
     }
