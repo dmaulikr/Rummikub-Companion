@@ -86,7 +86,7 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         return cell
     }
     
-    //Methods
+    //MARK: Methods
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         
         //add each player to the array players as Player objects
