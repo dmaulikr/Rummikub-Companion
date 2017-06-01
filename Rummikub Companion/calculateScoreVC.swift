@@ -110,10 +110,12 @@ class calculateScoreVC: UIViewController {
             self.currentPlayerForCalc += 1
         }
         playerNameLbl.text = players[currentPlayerForCalc].name
-        if self.currentPlayerIsTheLast() || self.currentPlayerForCalc+1 == self.winner{
+        
+        if self.currentPlayerIsTheLast() || (self.currentPlayerForCalc+1 == self.winner && self.currentPlayerForCalc+1 == self.players.count-1){
             self.nextBtn.isHidden = true
             self.finishBtn.isHidden = false
         }
+        
         if !self.previousBtn.isEnabled && !currentPlayerIsTheFirst(){
             self.previousBtn.isEnabled = true
         }
