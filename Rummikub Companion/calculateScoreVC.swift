@@ -96,6 +96,9 @@ class calculateScoreVC: UIViewController {
             self.nextBtn.isHidden = false
             self.finishBtn.isHidden = true
         }
+        if !self.previousBtn.isEnabled && !currentPlayerIsTheFirst() && currentPlayerForCalc-1 != self.winner{
+            self.previousBtn.isEnabled = true
+        }
     }
     
     @IBAction func resetBtnPressed(_ sender: UIButton) {
@@ -110,10 +113,12 @@ class calculateScoreVC: UIViewController {
             self.currentPlayerForCalc += 1
         }
         playerNameLbl.text = players[currentPlayerForCalc].name
-        if self.currentPlayerIsTheLast() || self.currentPlayerForCalc+1 == self.winner{
+        
+        if self.currentPlayerIsTheLast() || (self.currentPlayerForCalc+1 == self.winner && self.currentPlayerForCalc+1 == self.players.count-1){
             self.nextBtn.isHidden = true
             self.finishBtn.isHidden = false
         }
+        
         if !self.previousBtn.isEnabled && !currentPlayerIsTheFirst(){
             self.previousBtn.isEnabled = true
         }
@@ -121,9 +126,9 @@ class calculateScoreVC: UIViewController {
     
     @IBAction func finishBtnPressed(_ sender: UIButton) {
         
-        let alertController = UIAlertController(title: "Finish Round Score", message: "Confirm end of round score calculation?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "The score will be calculated", message: "Did you enter the remaining pieces correctly?", preferredStyle: .alert)
         
-        let OKAction = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
+        let OKAction = UIAlertAction(title: "Sure 😎", style: .default) { (action:UIAlertAction!) in
             for (index, element) in self.players.enumerated(){
                 if index != self.winner{
                     element.score.subtract(value: self.runningRemainingPiecesArr[index])
@@ -134,7 +139,7 @@ class calculateScoreVC: UIViewController {
             self.performSegue(withIdentifier: "calculateScoreVCReviewScoreVC", sender: self.players)
             }
         
-        let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Let me double check 😅", style: .default, handler: nil)
         
         alertController.addAction(OKAction)
         alertController.addAction(cancelAction)

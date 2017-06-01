@@ -8,28 +8,52 @@
 
 import UIKit
 
-class ReviewScoresVC: UIViewController {
+class ReviewScoresVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var players = [Player]()
+    
+    @IBOutlet weak var scoreBoardTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.scoreBoardTableView.delegate = self
+        self.scoreBoardTableView.dataSource = self
+        self.scoreBoardTableView.reloadData()
+        
     }
     
+    //MARK: TableView DataSource and Delegate
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return players.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerScoreTableViewCell", for: indexPath) as! PlayerScoreTableViewCell
+        
+        cell.playerNameLbl.text = self.players[indexPath.row].name
+            
+        cell.playerScoreLbl.text = "\(self.players[indexPath.row].score.total)"
+        
+        return cell
+        
+    }
+    
+    //MARK: Methods
+    @IBAction func nextRoundBtnPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "ReviewScoresVCturnsVC", sender: self.players)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? turnsVC{
+            if let players = sender as? [Player]{
+                destination.players = players   
+            }
+        }
+    }
+    
+    
 }
