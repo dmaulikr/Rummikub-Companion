@@ -71,7 +71,6 @@ class calculateScoreVC: UIViewController {
     @IBAction func valueBtnPressed(_ sender: UIButton) {
         if let value = Int((sender.titleLabel?.text)!){
             addRemainingPiecesForCurrentPlayer(value: value)
-            print(runningRemainingPiecesArr[currentPlayerForCalc])
         }
         
     }

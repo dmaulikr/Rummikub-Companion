@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C12AE481E78FB8E00DD7424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE471E78FB8E00DD7424 /* AppDelegate.swift */; };
-		5C12AE4A1E78FB8E00DD7424 /* firstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE491E78FB8E00DD7424 /* firstVC.swift */; };
 		5C12AE4D1E78FB8E00DD7424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C12AE4B1E78FB8E00DD7424 /* Main.storyboard */; };
 		5C12AE501E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE4E1E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld */; };
 		5C12AE521E78FB8E00DD7424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C12AE511E78FB8E00DD7424 /* Assets.xcassets */; };
@@ -24,6 +23,7 @@
 		5CA644931EDCD99B0031C52A /* ReviewScoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA644921EDCD99B0031C52A /* ReviewScoresVC.swift */; };
 		5CA644951EDE09B30031C52A /* PlayerScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA644941EDE09B30031C52A /* PlayerScoreTableViewCell.swift */; };
 		5CD863211E7DC0370048FB8E /* PlayerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */; };
+		5CDA182F1EEB68E600C3966A /* firstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA182E1EEB68E600C3966A /* firstVC.swift */; };
 		5CF23B621EC0BB8500029F10 /* turnsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF23B611EC0BB8500029F10 /* turnsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,6 @@
 /* Begin PBXFileReference section */
 		5C12AE441E78FB8E00DD7424 /* Rummikub Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rummikub Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C12AE471E78FB8E00DD7424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C12AE491E78FB8E00DD7424 /* firstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstVC.swift; sourceTree = "<group>"; };
 		5C12AE4C1E78FB8E00DD7424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C12AE4F1E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rummikub_Companion.xcdatamodel; sourceTree = "<group>"; };
 		5C12AE511E78FB8E00DD7424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		5CA644921EDCD99B0031C52A /* ReviewScoresVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewScoresVC.swift; path = ../ReviewScoresVC.swift; sourceTree = "<group>"; };
 		5CA644941EDE09B30031C52A /* PlayerScoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerScoreTableViewCell.swift; sourceTree = "<group>"; };
 		5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNameTableViewCell.swift; sourceTree = "<group>"; };
+		5CDA182E1EEB68E600C3966A /* firstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstVC.swift; sourceTree = "<group>"; };
 		5CF23B611EC0BB8500029F10 /* turnsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = turnsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,8 +146,8 @@
 		5C12AE6C1E78FC0F00DD7424 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5CDA182E1EEB68E600C3966A /* firstVC.swift */,
 				5CA644921EDCD99B0031C52A /* ReviewScoresVC.swift */,
-				5C12AE491E78FB8E00DD7424 /* firstVC.swift */,
 				5C12AE771E79F09A00DD7424 /* newGameVC.swift */,
 				5C537D401ECA6BCE0045DD69 /* calculateScoreVC.swift */,
 				5CF23B611EC0BB8500029F10 /* turnsVC.swift */,
@@ -201,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = evtApps;
 				TargetAttributes = {
 					5C12AE431E78FB8E00DD7424 = {
@@ -264,13 +264,13 @@
 				5C12AE501E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld in Sources */,
 				5C12AE6E1E78FCB100DD7424 /* Score.swift in Sources */,
 				5CD863211E7DC0370048FB8E /* PlayerNameTableViewCell.swift in Sources */,
-				5C12AE4A1E78FB8E00DD7424 /* firstVC.swift in Sources */,
 				5C12AE701E78FCED00DD7424 /* Player.swift in Sources */,
 				5C12AE741E79079800DD7424 /* Brain.swift in Sources */,
 				5C12AE721E79070400DD7424 /* Round.swift in Sources */,
 				5CA644951EDE09B30031C52A /* PlayerScoreTableViewCell.swift in Sources */,
 				5C12AE481E78FB8E00DD7424 /* AppDelegate.swift in Sources */,
 				5C537D411ECA6BCE0045DD69 /* calculateScoreVC.swift in Sources */,
+				5CDA182F1EEB68E600C3966A /* firstVC.swift in Sources */,
 				5CA644931EDCD99B0031C52A /* ReviewScoresVC.swift in Sources */,
 				5C12AE781E79F09A00DD7424 /* newGameVC.swift in Sources */,
 				5C537D3F1ECA59050045DD69 /* winnerVC.swift in Sources */,
@@ -334,6 +334,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -384,6 +385,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

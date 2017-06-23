@@ -95,7 +95,7 @@ class turnsVC: UIViewController {
     }
     
     @IBAction func backBtnPressed(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "TurnsVCFirstVC", sender: self)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
