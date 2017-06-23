@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,10 +37,13 @@
                                     <action selector="newGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oh3-fU-Mka"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkt-c0-dQO">
-                                <rect key="frame" x="35" y="362" width="305" height="42"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkt-c0-dQO">
+                                <rect key="frame" x="103" y="362" width="169" height="42"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
-                                <state key="normal" title="Continue Game (Implement)"/>
+                                <state key="normal" title="Continue Game"/>
+                                <connections>
+                                    <action selector="continueGameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TAX-xd-AnZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,7 +57,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="continueGameBtn" destination="Vkt-c0-dQO" id="wfC-dy-4jY"/>
                         <segue destination="wN9-zX-XLl" kind="show" identifier="newGameVC" id="wFW-3R-Z15"/>
+                        <segue destination="NSf-qX-aZe" kind="show" identifier="FirstVCTurnsVC" id="P4Q-lW-gff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -695,6 +700,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sqh-fT-7Mt"/>
+        <segue reference="P4Q-lW-gff"/>
     </inferredMetricsTieBreakers>
 </document>
