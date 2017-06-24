@@ -22,44 +22,49 @@ class firstVC: UIViewController {
     //MARK:Actions
     @IBAction func newGamePressed(_ sender: UIButton) {
         
-        let alertController = UIAlertController(title: "New Game Warning", message: "All previous game score will be deleted!", preferredStyle: .alert)
-        
-        let OKAction = UIAlertAction(title: "Delete 😎", style: .default) { (action:UIAlertAction!) in
+        //Manage actions according to Core Data existing data
+        if !self.people.isEmpty{
+            let alertController = UIAlertController(title: "New Game Warning", message: "All previous game score will be deleted!", preferredStyle: .alert)
             
-            //Delete existing data from database
-            
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-                return
-            }
-            
-            //Create Managed Object Context
-             let managedObjectContext = appDelegate.persistentContainer.viewContext
-            
-            // Create Fetch Request
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
-            
-            // Create Batch Delete Request
-            let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-            
-            do {
-                try managedObjectContext.execute(batchDeleteRequest)
+            let OKAction = UIAlertAction(title: "Delete 😎", style: .default) { (action:UIAlertAction!) in
                 
-            } catch {
-                // Error Handling
+                //Delete existing data from database
+                
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+                    return
+                }
+                
+                //Create Managed Object Context
+                let managedObjectContext = appDelegate.persistentContainer.viewContext
+                
+                // Create Fetch Request
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
+                
+                // Create Batch Delete Request
+                let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                
+                do {
+                    try managedObjectContext.execute(batchDeleteRequest)
+                    
+                } catch {
+                    // Error Handling
+                }
+                
+                
+                self.performSegue(withIdentifier: "newGameVC", sender:sender)
+                
             }
-  
             
-          self.performSegue(withIdentifier: "newGameVC", sender:sender)
+            let cancelAction = UIAlertAction(title: "Nope 😅", style: .default, handler: nil)
             
+            alertController.addAction(OKAction)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+
+        }else{
+            self.performSegue(withIdentifier: "newGameVC", sender:sender)
         }
-        
-        let cancelAction = UIAlertAction(title: "Nope 😅", style: .default, handler: nil)
-        
-        alertController.addAction(OKAction)
-        alertController.addAction(cancelAction)
-        
-        self.present(alertController, animated: true, completion: nil)
-        
         
     }
     
