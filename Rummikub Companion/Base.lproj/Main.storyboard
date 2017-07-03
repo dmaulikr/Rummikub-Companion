@@ -65,7 +65,7 @@
                     <connections>
                         <outlet property="continueGameBtn" destination="Vkt-c0-dQO" id="wfC-dy-4jY"/>
                         <segue destination="wN9-zX-XLl" kind="show" identifier="newGameVC" id="wFW-3R-Z15"/>
-                        <segue destination="NSf-qX-aZe" kind="show" identifier="FirstVCTurnsVC" id="P4Q-lW-gff"/>
+                        <segue destination="PFJ-yQ-yOB" kind="show" identifier="FirstVCReviewScoresVC" id="Q54-QJ-VWu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,7 +121,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ACE-E6-mP7">
-                                                    <rect key="frame" x="6" y="6" width="276" height="32"/>
+                                                    <rect key="frame" x="6" y="6" width="331" height="32"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-uc-0Lc">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
@@ -133,7 +133,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player name(no duplicate)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLi-vH-UB3">
-                                                            <rect key="frame" x="82" y="0.0" width="194" height="32"/>
+                                                            <rect key="frame" x="82" y="0.0" width="249" height="32"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -635,10 +635,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerScoreTableViewCell" id="l29-iV-fWU" customClass="PlayerScoreTableViewCell" customModule="Rummikub_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l29-iV-fWU" id="Iaw-e5-eVK">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V2-sb-fZy">
@@ -715,5 +715,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UmR-9G-nMD"/>
+        <segue reference="Q54-QJ-VWu"/>
     </inferredMetricsTieBreakers>
 </document>
