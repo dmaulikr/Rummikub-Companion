@@ -69,7 +69,7 @@ class firstVC: UIViewController {
     }
     
     @IBAction func continueGameBtnPressed(_ sender: UIButton) {
-       self.performSegue(withIdentifier: "FirstVCTurnsVC", sender: self.players)
+       self.performSegue(withIdentifier: "FirstVCReviewScoresVC", sender: self.players)
     }
     
     //MARK: Functions
@@ -115,7 +115,7 @@ class firstVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? turnsVC{
+        if let destination = segue.destination as? ReviewScoresVC{
             if let players = sender as? [Player]{
                 destination.players = players
             }
