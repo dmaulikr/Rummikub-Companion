@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-f3-9Xu">
-                                <rect key="frame" x="45" y="346" width="284" height="54"/>
+                                <rect key="frame" x="45.5" y="346" width="284" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="ONv-U2-FBM"/>
                                     <constraint firstAttribute="width" constant="284" id="cRi-dK-WMW"/>
@@ -94,23 +94,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of players:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFq-Ic-KPx">
-                                <rect key="frame" x="16" y="28" width="133" height="20"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="28" width="145.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="oUx-Cf-7Pb">
-                                <rect key="frame" x="16" y="46" width="343" height="118"/>
+                                <rect key="frame" x="16" y="47" width="343" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="rGy-Ze-JxU"/>
                                 </constraints>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="bottom" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mOv-OC-jNq">
-                                <rect key="frame" x="16" y="172" width="343" height="90"/>
+                                <rect key="frame" x="16" y="173" width="343" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="zpD-gD-ff0"/>
                                 </constraints>
+                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerNameTableViewCell" id="1nO-Y5-cYn" customClass="PlayerNameTableViewCell" customModule="Rummikub_Companion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
@@ -120,7 +121,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ACE-E6-mP7">
-                                                    <rect key="frame" x="6" y="6" width="331" height="32"/>
+                                                    <rect key="frame" x="6" y="6" width="276" height="32"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-uc-0Lc">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
@@ -132,7 +133,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player name(no duplicate)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLi-vH-UB3">
-                                                            <rect key="frame" x="82" y="0.0" width="249" height="32"/>
+                                                            <rect key="frame" x="82" y="0.0" width="194" height="32"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -157,14 +158,14 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-AV-ma3">
-                                <rect key="frame" x="322" y="262" width="37" height="30"/>
+                                <rect key="frame" x="322" y="263" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="wN9-zX-XLl" eventType="touchUpInside" id="tXH-1o-2m3"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="mOv-OC-jNq" secondAttribute="leading" id="0Lh-bf-mZp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="oUx-Cf-7Pb" secondAttribute="leading" id="5S8-Ue-AhQ"/>
@@ -227,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Turns" id="fxn-gZ-aNm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back(New Game)" id="MID-Fi-YUi">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="MID-Fi-YUi">
                                             <connections>
                                                 <action selector="backBtnPressed:" destination="NSf-qX-aZe" id="G90-lU-qQE"/>
                                             </connections>
@@ -241,7 +242,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-2N-whP">
-                                <rect key="frame" x="50.5" y="269" width="274" height="130"/>
+                                <rect key="frame" x="50.5" y="268.5" width="274" height="130"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="114"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -303,7 +304,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-Gp-MAc">
-                                <rect key="frame" x="110" y="216" width="156" height="30"/>
+                                <rect key="frame" x="109.5" y="216" width="156" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1kU-tn-CLA"/>
                                     <constraint firstAttribute="width" constant="156" id="poA-zx-qqD"/>
@@ -314,7 +315,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gud-qg-INe">
-                                <rect key="frame" x="28" y="90.5" width="320" height="118"/>
+                                <rect key="frame" x="27.5" y="90.5" width="320" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="Nqz-dy-hTa"/>
                                 </constraints>
@@ -379,28 +380,30 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PtJ-aX-YSR">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="89"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kj-ZJ-odh">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kj-ZJ-odh" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="76" height="89"/>
-                                                        <state key="normal" title="1"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.1333333333" green="0.44705882349999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="GPJ-mE-NjQ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-i3-k9C">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-i3-k9C" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="84" y="0.0" width="75.5" height="89"/>
                                                         <state key="normal" title="2"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="WCF-3b-ogb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blH-Uz-xCe">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blH-Uz-xCe" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="167.5" y="0.0" width="76" height="89"/>
                                                         <state key="normal" title="3"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="PzJ-37-BYj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYg-gr-c0h">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYg-gr-c0h" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="251.5" y="0.0" width="75.5" height="89"/>
                                                         <state key="normal" title="4"/>
                                                         <connections>
@@ -412,28 +415,28 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bb4-s6-MF1">
                                                 <rect key="frame" x="0.0" y="97" width="327" height="88.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWM-1M-wL2">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWM-1M-wL2" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="76" height="88.5"/>
                                                         <state key="normal" title="5"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="0Oy-fs-Zdn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVd-Mh-52W">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVd-Mh-52W" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="84" y="0.0" width="75.5" height="88.5"/>
                                                         <state key="normal" title="6"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="sy7-rI-sif"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsG-xA-R81">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsG-xA-R81" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="167.5" y="0.0" width="76" height="88.5"/>
                                                         <state key="normal" title="7"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="0ue-q7-ejk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SW0-64-G7z">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SW0-64-G7z" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="251.5" y="0.0" width="75.5" height="88.5"/>
                                                         <state key="normal" title="8"/>
                                                         <connections>
@@ -445,28 +448,28 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MJm-iH-8i8">
                                                 <rect key="frame" x="0.0" y="193.5" width="327" height="89"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-ct-dCW">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-ct-dCW" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="76" height="89"/>
                                                         <state key="normal" title="9"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="Y5P-QF-jfc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWX-Oi-aGD">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWX-Oi-aGD" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="84" y="0.0" width="75.5" height="89"/>
                                                         <state key="normal" title="10"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="5Ur-QB-odZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65p-Cn-qJG">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65p-Cn-qJG" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="167.5" y="0.0" width="76" height="89"/>
                                                         <state key="normal" title="11"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="E6D-kH-E0X"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpw-SK-u7O">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpw-SK-u7O" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="251.5" y="0.0" width="75.5" height="89"/>
                                                         <state key="normal" title="12"/>
                                                         <connections>
@@ -481,14 +484,14 @@
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1g-1V-aMe">
                                                         <rect key="frame" x="0.0" y="0.0" width="76" height="88.5"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4F-6v-x1i">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4F-6v-x1i" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="84" y="0.0" width="75.5" height="88.5"/>
                                                         <state key="normal" title="13"/>
                                                         <connections>
                                                             <action selector="valueBtnPressed:" destination="bf1-tT-Ywd" eventType="touchUpInside" id="keb-nz-R2J"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siM-C5-kVP">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siM-C5-kVP" customClass="PieceButton" customModule="Rummikub_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="167.5" y="0.0" width="76" height="88.5"/>
                                                         <state key="normal" title="Joker"/>
                                                         <connections>
@@ -601,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mtx-PC-nZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="42.728635682158924"/>
+            <point key="canvasLocation" x="2984" y="42"/>
         </scene>
         <!--Review ScoresVC-->
         <scene sceneID="GQQ-GN-fQi">
@@ -632,10 +635,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerScoreTableViewCell" id="l29-iV-fWU" customClass="PlayerScoreTableViewCell" customModule="Rummikub_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l29-iV-fWU" id="Iaw-e5-eVK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V2-sb-fZy">
@@ -702,7 +705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LC0-WB-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3618.4000000000001" y="43.628185907046479"/>
+            <point key="canvasLocation" x="3710" y="42"/>
         </scene>
     </scenes>
     <resources>
@@ -711,6 +714,6 @@
         <image name="NewGameBtn.png" width="838" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P4Q-lW-gff"/>
+        <segue reference="UmR-9G-nMD"/>
     </inferredMetricsTieBreakers>
 </document>
