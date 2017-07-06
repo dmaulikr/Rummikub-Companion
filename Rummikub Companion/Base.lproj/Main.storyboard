@@ -224,16 +224,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZH-f7-b9y">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZH-f7-b9y" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Turns" id="fxn-gZ-aNm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="MID-Fi-YUi">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="MID-Fi-YUi" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
                                             <connections>
                                                 <action selector="backBtnPressed:" destination="NSf-qX-aZe" id="G90-lU-qQE"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Finish Round" id="0Wt-Rr-zwb">
+                                        <barButtonItem key="rightBarButtonItem" title="Finish Round" id="0Wt-Rr-zwb" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
                                             <connections>
                                                 <action selector="finishRoundBtnPressed:" destination="NSf-qX-aZe" id="9br-w2-4op"/>
                                             </connections>
@@ -250,7 +250,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KZH-f7-b9y" firstAttribute="top" secondItem="OQ7-fd-bCY" secondAttribute="topMargin" constant="20" id="EpC-by-5zt"/>
+                            <constraint firstItem="KZH-f7-b9y" firstAttribute="top" secondItem="OQ7-fd-bCY" secondAttribute="topMargin" id="EpC-by-5zt"/>
                             <constraint firstAttribute="trailing" secondItem="ex6-0l-jj8" secondAttribute="trailing" id="Sah-6p-Ad6"/>
                             <constraint firstItem="KZH-f7-b9y" firstAttribute="leading" secondItem="OQ7-fd-bCY" secondAttribute="leading" id="UXF-64-nRz"/>
                             <constraint firstAttribute="trailing" secondItem="KZH-f7-b9y" secondAttribute="trailing" id="cFd-MD-Vv3"/>
@@ -282,8 +282,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-XA-ueO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-XA-ueO" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5oL-ia-D5a"/>
                                 </constraints>
@@ -298,13 +298,13 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who was this round's winnner?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSC-ep-tYB">
-                                <rect key="frame" x="24" y="72" width="327" height="21"/>
+                                <rect key="frame" x="24" y="52" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-Gp-MAc">
-                                <rect key="frame" x="109.5" y="216" width="156" height="30"/>
+                                <rect key="frame" x="109.5" y="196" width="156" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1kU-tn-CLA"/>
                                     <constraint firstAttribute="width" constant="156" id="poA-zx-qqD"/>
@@ -315,7 +315,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gud-qg-INe">
-                                <rect key="frame" x="27.5" y="90.5" width="320" height="118"/>
+                                <rect key="frame" x="27.5" y="70.5" width="320" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="Nqz-dy-hTa"/>
                                 </constraints>
@@ -324,7 +324,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NSC-ep-tYB" firstAttribute="top" secondItem="A5F-XA-ueO" secondAttribute="bottom" constant="8" id="3qY-8l-9wj"/>
-                            <constraint firstItem="A5F-XA-ueO" firstAttribute="top" secondItem="vt0-ci-7z9" secondAttribute="top" constant="20" id="6CS-UO-vQI"/>
+                            <constraint firstItem="A5F-XA-ueO" firstAttribute="top" secondItem="vt0-ci-7z9" secondAttribute="top" id="6CS-UO-vQI"/>
                             <constraint firstItem="NSC-ep-tYB" firstAttribute="leading" secondItem="vt0-ci-7z9" secondAttribute="leadingMargin" constant="8" id="Ojr-Jk-w8N"/>
                             <constraint firstItem="A5F-XA-ueO" firstAttribute="leading" secondItem="vt0-ci-7z9" secondAttribute="leading" id="TKK-HL-lUJ"/>
                             <constraint firstItem="jKQ-Gp-MAc" firstAttribute="centerX" secondItem="vt0-ci-7z9" secondAttribute="centerX" id="WXO-0V-NfM"/>
@@ -356,14 +356,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fx-hb-GWa">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fx-hb-GWa" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Enter remaining pieces for:" id="mZF-Ve-CIR"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-yb-XhV">
-                                <rect key="frame" x="139.5" y="72" width="96.5" height="21"/>
+                                <rect key="frame" x="139.5" y="52" width="96.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="sAj-2B-Uh6"/>
                                 </constraints>
@@ -372,7 +372,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GP7-Lf-a1Q">
-                                <rect key="frame" x="16" y="101" width="343" height="395"/>
+                                <rect key="frame" x="16" y="81" width="343" height="395"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-pK-Wq7">
                                         <rect key="frame" x="8" y="8" width="327" height="379"/>
@@ -516,7 +516,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KSQ-Vd-pRc">
-                                <rect key="frame" x="36" y="557" width="303" height="30"/>
+                                <rect key="frame" x="36" y="537" width="303" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-1s-jKR">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
@@ -552,7 +552,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-3C-Sp1">
-                                <rect key="frame" x="36" y="504" width="303" height="45"/>
+                                <rect key="frame" x="36" y="484" width="303" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-wf-6s6">
                                         <rect key="frame" x="0.0" y="12.5" width="50" height="20.5"/>
@@ -582,7 +582,7 @@
                             <constraint firstItem="kuM-3C-Sp1" firstAttribute="top" secondItem="GP7-Lf-a1Q" secondAttribute="bottom" constant="8" id="8Vf-4H-yKc"/>
                             <constraint firstItem="KSQ-Vd-pRc" firstAttribute="leading" secondItem="PjD-uC-hLi" secondAttribute="leadingMargin" constant="20" id="AGs-XA-LrG"/>
                             <constraint firstItem="GP7-Lf-a1Q" firstAttribute="top" secondItem="d9b-yb-XhV" secondAttribute="bottom" constant="8" id="Qq8-MQ-zGC"/>
-                            <constraint firstItem="5fx-hb-GWa" firstAttribute="top" secondItem="PjD-uC-hLi" secondAttribute="top" constant="20" id="T6q-Nx-SNZ"/>
+                            <constraint firstItem="5fx-hb-GWa" firstAttribute="top" secondItem="PjD-uC-hLi" secondAttribute="top" id="T6q-Nx-SNZ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GP7-Lf-a1Q" secondAttribute="leading" id="a7N-Ya-mvn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GP7-Lf-a1Q" secondAttribute="trailing" id="cu6-CK-c4O"/>
                             <constraint firstItem="d9b-yb-XhV" firstAttribute="top" secondItem="5fx-hb-GWa" secondAttribute="bottom" constant="8" id="hMr-d8-HjE"/>
@@ -618,8 +618,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4L-XJ-nda">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4L-XJ-nda" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ZiG-XW-SE9"/>
                                 </constraints>
@@ -628,7 +628,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q3y-Y5-edW">
-                                <rect key="frame" x="16" y="72" width="343" height="180"/>
+                                <rect key="frame" x="16" y="52" width="343" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="yzF-pi-Q7m"/>
@@ -675,7 +675,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvo-da-HAp">
-                                <rect key="frame" x="131" y="260" width="113" height="30"/>
+                                <rect key="frame" x="131" y="240" width="113" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="RwD-gh-G35"/>
                                     <constraint firstAttribute="height" constant="30" id="nlq-EV-od7"/>
@@ -693,7 +693,7 @@
                             <constraint firstItem="Q3y-Y5-edW" firstAttribute="top" secondItem="e4L-XJ-nda" secondAttribute="bottom" constant="8" id="NB7-gH-BCp"/>
                             <constraint firstItem="vvo-da-HAp" firstAttribute="top" secondItem="Q3y-Y5-edW" secondAttribute="bottom" constant="8" id="Phs-m7-TKT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q3y-Y5-edW" secondAttribute="trailing" id="UjR-Nq-Sbu"/>
-                            <constraint firstItem="e4L-XJ-nda" firstAttribute="top" secondItem="F3E-81-usj" secondAttribute="top" constant="20" id="WVi-8C-qo2"/>
+                            <constraint firstItem="e4L-XJ-nda" firstAttribute="top" secondItem="F3E-81-usj" secondAttribute="top" id="WVi-8C-qo2"/>
                             <constraint firstItem="Q3y-Y5-edW" firstAttribute="leading" secondItem="F3E-81-usj" secondAttribute="leadingMargin" id="jEA-gE-4tw"/>
                             <constraint firstItem="e4L-XJ-nda" firstAttribute="leading" secondItem="F3E-81-usj" secondAttribute="leading" id="vRg-xd-WCO"/>
                         </constraints>
@@ -714,7 +714,7 @@
         <image name="NewGameBtn.png" width="838" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UmR-9G-nMD"/>
-        <segue reference="Q54-QJ-VWu"/>
+        <segue reference="sqh-fT-7Mt"/>
+        <segue reference="Z2a-Dr-uSc"/>
     </inferredMetricsTieBreakers>
 </document>
