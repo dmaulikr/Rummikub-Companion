@@ -110,6 +110,10 @@ class turnsVC: UIViewController {
         self.performSegue(withIdentifier: "turnsVCwinnerVC", sender: players)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
 
 }
