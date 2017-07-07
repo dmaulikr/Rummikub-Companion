@@ -26,9 +26,12 @@ class turnsVC: UIViewController {
 
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         seconds = turnTime
         
-        super.viewDidLoad()
+        //prevent the screen from sleeping
+        UIApplication.shared.isIdleTimerDisabled = true
         
 
     }
