@@ -64,4 +64,8 @@ class winnerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             }
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

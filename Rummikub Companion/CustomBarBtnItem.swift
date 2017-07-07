@@ -13,9 +13,18 @@ class CustomBarBtnItem: UIBarButtonItem {
     override func awakeFromNib() {
         
         let controlState :UIControlState = .normal
-        self.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Baskerville", size: 21)!, NSForegroundColorAttributeName: UIColor.white], for: controlState)
+        self.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 17)!, NSForegroundColorAttributeName: UIColor.white], for: controlState)
+        self.setTitlePositionAdjustment(UIOffset(horizontal: 0, vertical: 8), for: UIBarMetrics.default)
         
-        //self.customView?.bounds = CGRect(x: self.customView.bounds.c, y: <#T##Int#>, width: <#T##Int#>, height: <#T##Int#>)
+        guard let view = self.customView else{
+            print("error: no view to mess with")
+            return
+        }
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.white.cgColor
+        
+        
     }
+    
 
 }

@@ -136,7 +136,7 @@
                                                             <rect key="frame" x="82" y="0.0" width="249" height="32"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -289,7 +289,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Round Winner" id="iMN-39-ch5">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="VPl-LC-vcJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="VPl-LC-vcJ" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
                                             <connections>
                                                 <action selector="backBtnPressed:" destination="ytz-oV-aii" id="NUN-OP-IbV"/>
                                             </connections>
@@ -714,7 +714,7 @@
         <image name="NewGameBtn.png" width="838" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sqh-fT-7Mt"/>
+        <segue reference="UmR-9G-nMD"/>
         <segue reference="Z2a-Dr-uSc"/>
     </inferredMetricsTieBreakers>
 </document>
