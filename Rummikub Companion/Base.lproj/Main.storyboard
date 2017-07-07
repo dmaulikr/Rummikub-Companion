@@ -228,12 +228,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Turns" id="fxn-gZ-aNm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="MID-Fi-YUi" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="MID-Fi-YUi" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
                                             <connections>
                                                 <action selector="backBtnPressed:" destination="NSf-qX-aZe" id="G90-lU-qQE"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Finish Round" id="0Wt-Rr-zwb" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
+                                        <barButtonItem key="rightBarButtonItem" title="Finish Round" style="plain" id="0Wt-Rr-zwb" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
                                             <connections>
                                                 <action selector="finishRoundBtnPressed:" destination="NSf-qX-aZe" id="9br-w2-4op"/>
                                             </connections>
@@ -261,7 +261,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backBtn" destination="MID-Fi-YUi" id="Hvb-Xv-tNt"/>
                         <outlet property="countingLabel" destination="YXQ-2N-whP" id="1yV-as-len"/>
+                        <outlet property="finishRoundBtn" destination="0Wt-Rr-zwb" id="aPe-Ku-Rxk"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="TurnsVCFirstVC" id="XFn-9i-wfh"/>
                         <segue destination="ytz-oV-aii" kind="show" identifier="turnsVCwinnerVC" id="AHD-Ut-7v7"/>
                     </connections>
@@ -289,7 +291,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Round Winner" id="iMN-39-ch5">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="VPl-LC-vcJ" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="VPl-LC-vcJ" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
                                             <connections>
                                                 <action selector="backBtnPressed:" destination="ytz-oV-aii" id="NUN-OP-IbV"/>
                                             </connections>

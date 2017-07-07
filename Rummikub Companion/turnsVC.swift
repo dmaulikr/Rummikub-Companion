@@ -11,7 +11,9 @@ import AVFoundation
 
 class turnsVC: UIViewController {
     //MARK: Properties
+    @IBOutlet weak var finishRoundBtn: CustomBarBtnItem!
     @IBOutlet weak var countingLabel: UILabel!
+    @IBOutlet weak var backBtn: CustomBarBtnItem!
     
     let turnTime = 120
     var seconds = Int()
