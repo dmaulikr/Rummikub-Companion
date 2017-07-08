@@ -19,6 +19,8 @@
 		5C12AE741E79079800DD7424 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE731E79079800DD7424 /* Brain.swift */; };
 		5C12AE781E79F09A00DD7424 /* newGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12AE771E79F09A00DD7424 /* newGameVC.swift */; };
 		5C2E32D61F112CAE003AD29A /* CustomNavbarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E32D51F112CAE003AD29A /* CustomNavbarBg.png */; };
+		5C2E32D91F11373E003AD29A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E32D81F11373E003AD29A /* CustomButton.swift */; };
+		5C2E32DB1F113D8C003AD29A /* CustomBottomBarBtnItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E32DA1F113D8C003AD29A /* CustomBottomBarBtnItem.swift */; };
 		5C537D3F1ECA59050045DD69 /* winnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C537D3E1ECA59050045DD69 /* winnerVC.swift */; };
 		5C537D411ECA6BCE0045DD69 /* calculateScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C537D401ECA6BCE0045DD69 /* calculateScoreVC.swift */; };
 		5C5933A11F09AFF600485239 /* PieceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5933A01F09AFF600485239 /* PieceButton.swift */; };
@@ -63,6 +65,8 @@
 		5C12AE731E79079800DD7424 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		5C12AE771E79F09A00DD7424 /* newGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newGameVC.swift; sourceTree = "<group>"; };
 		5C2E32D51F112CAE003AD29A /* CustomNavbarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CustomNavbarBg.png; sourceTree = "<group>"; };
+		5C2E32D81F11373E003AD29A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		5C2E32DA1F113D8C003AD29A /* CustomBottomBarBtnItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBottomBarBtnItem.swift; sourceTree = "<group>"; };
 		5C537D3E1ECA59050045DD69 /* winnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winnerVC.swift; sourceTree = "<group>"; };
 		5C537D401ECA6BCE0045DD69 /* calculateScoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculateScoreVC.swift; sourceTree = "<group>"; };
 		5C5933A01F09AFF600485239 /* PieceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PieceButton.swift; path = ../PieceButton.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				5C5933A01F09AFF600485239 /* PieceButton.swift */,
 				5CD863201E7DC0370048FB8E /* PlayerNameTableViewCell.swift */,
 				5CA644941EDE09B30031C52A /* PlayerScoreTableViewCell.swift */,
+				5C2E32D81F11373E003AD29A /* CustomButton.swift */,
+				5C2E32DA1F113D8C003AD29A /* CustomBottomBarBtnItem.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -304,8 +310,10 @@
 			files = (
 				5C12AE501E78FB8E00DD7424 /* Rummikub_Companion.xcdatamodeld in Sources */,
 				5C12AE6E1E78FCB100DD7424 /* Score.swift in Sources */,
+				5C2E32D91F11373E003AD29A /* CustomButton.swift in Sources */,
 				5C5933A31F0A002000485239 /* CustomNavBar.swift in Sources */,
 				5C5933A71F0A097400485239 /* CustomBarBtnItem.swift in Sources */,
+				5C2E32DB1F113D8C003AD29A /* CustomBottomBarBtnItem.swift in Sources */,
 				5CD863211E7DC0370048FB8E /* PlayerNameTableViewCell.swift in Sources */,
 				5C12AE701E78FCED00DD7424 /* Player.swift in Sources */,
 				5C12AE741E79079800DD7424 /* Brain.swift in Sources */,
