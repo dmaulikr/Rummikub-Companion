@@ -96,7 +96,20 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         if let tableView = self.playersNamesTableView.visibleCells as? [PlayerNameTableViewCell]{
             for c:PlayerNameTableViewCell in tableView{
                 if let name = c.playerNameTextField.text{
-                    self.players.append(Player(name: name))
+                    if name != ""{
+                        self.players.append(Player(name: name))
+                    }else{
+                        let alert = UIAlertController(title: "Ops...", message: "A Player's name can't be empty.", preferredStyle: .alert)
+                        
+                        let okAction = UIAlertAction(title: "I'll fix it 😅", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                            
+                        self.present(alert, animated: true, completion: {
+                            self.players = [Player]()
+                            return
+                        })
+                    }
+                    
                 }
             }
         }
