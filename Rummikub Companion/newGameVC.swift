@@ -19,7 +19,6 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
     
     var players = [Player]()
     
-    
     //Data shown on numberOfPlayersPickerView
     let numberOfPlayersPickerViewData = ["2", "3", "4"]
     
@@ -92,11 +91,27 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
     //MARK: Methods
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         
+        var names = [String]()
+        
         //add each player to the array players as Player objects
         if let tableView = self.playersNamesTableView.visibleCells as? [PlayerNameTableViewCell]{
             for c:PlayerNameTableViewCell in tableView{
                 if let name = c.playerNameTextField.text{
-                    self.players.append(Player(name: name))
+                    if name != "" && !names.contains(name){
+                        names.append(name)
+                        self.players.append(Player(name: name))
+                    }else{
+                        let alert = UIAlertController(title: "Ops...", message: "A Player's name can't be empty or duplicated.", preferredStyle: .alert)
+                        
+                        let okAction = UIAlertAction(title: "I'll fix it 😅", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                            
+                        self.present(alert, animated: true, completion: {
+                            self.players = [Player]()
+                            return
+                        })
+                    }
+                    
                 }
             }
         }
@@ -120,10 +135,6 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
                 destination.players = players
             }
         }
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     
