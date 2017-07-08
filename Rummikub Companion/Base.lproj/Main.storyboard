@@ -225,7 +225,10 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZH-f7-b9y" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="YPr-6k-7OB"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Turns" id="fxn-gZ-aNm">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="MID-Fi-YUi" customClass="CustomBarBtnItem" customModule="Rummikub_Companion" customModuleProvider="target">
@@ -285,9 +288,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-XA-ueO" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="5oL-ia-D5a"/>
+                                    <constraint firstAttribute="height" constant="80" id="5oL-ia-D5a"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="Round Winner" id="iMN-39-ch5">
@@ -300,13 +303,13 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who was this round's winnner?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSC-ep-tYB">
-                                <rect key="frame" x="24" y="52" width="327" height="21"/>
+                                <rect key="frame" x="24" y="88" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-Gp-MAc">
-                                <rect key="frame" x="109.5" y="196" width="156" height="30"/>
+                                <rect key="frame" x="109.5" y="232" width="156" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1kU-tn-CLA"/>
                                     <constraint firstAttribute="width" constant="156" id="poA-zx-qqD"/>
@@ -317,7 +320,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gud-qg-INe">
-                                <rect key="frame" x="27.5" y="70.5" width="320" height="118"/>
+                                <rect key="frame" x="27.5" y="106.5" width="320" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="Nqz-dy-hTa"/>
                                 </constraints>
@@ -359,13 +362,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fx-hb-GWa" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="y3w-a6-Lav"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Enter remaining pieces for:" id="mZF-Ve-CIR"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-yb-XhV">
-                                <rect key="frame" x="139.5" y="52" width="96.5" height="21"/>
+                                <rect key="frame" x="139.5" y="88" width="96.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="sAj-2B-Uh6"/>
                                 </constraints>
@@ -374,7 +380,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GP7-Lf-a1Q">
-                                <rect key="frame" x="16" y="81" width="343" height="395"/>
+                                <rect key="frame" x="16" y="117" width="343" height="395"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-pK-Wq7">
                                         <rect key="frame" x="8" y="8" width="327" height="379"/>
@@ -518,7 +524,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KSQ-Vd-pRc">
-                                <rect key="frame" x="36" y="537" width="303" height="30"/>
+                                <rect key="frame" x="36" y="573" width="303" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-1s-jKR">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
@@ -554,7 +560,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-3C-Sp1">
-                                <rect key="frame" x="36" y="484" width="303" height="45"/>
+                                <rect key="frame" x="36" y="520" width="303" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-wf-6s6">
                                         <rect key="frame" x="0.0" y="12.5" width="50" height="20.5"/>
@@ -621,16 +627,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4L-XJ-nda" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ZiG-XW-SE9"/>
+                                    <constraint firstAttribute="height" constant="80" id="57C-hZ-BCM"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="Review Score Board" id="jgh-vS-69i"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q3y-Y5-edW">
-                                <rect key="frame" x="16" y="52" width="343" height="180"/>
+                                <rect key="frame" x="16" y="88" width="343" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="yzF-pi-Q7m"/>
@@ -677,7 +683,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvo-da-HAp">
-                                <rect key="frame" x="131" y="240" width="113" height="30"/>
+                                <rect key="frame" x="131" y="276" width="113" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="RwD-gh-G35"/>
                                     <constraint firstAttribute="height" constant="30" id="nlq-EV-od7"/>
@@ -716,7 +722,7 @@
         <image name="NewGameBtn.png" width="838" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UmR-9G-nMD"/>
+        <segue reference="sqh-fT-7Mt"/>
         <segue reference="Z2a-Dr-uSc"/>
     </inferredMetricsTieBreakers>
 </document>
