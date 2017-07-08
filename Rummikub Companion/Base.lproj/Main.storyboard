@@ -93,20 +93,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTt-ua-BbX" customClass="CustomNavBar" customModule="Rummikub_Companion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HnN-lS-EdR"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="New Game" id="3pO-Yn-JCC"/>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of players:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFq-Ic-KPx">
-                                <rect key="frame" x="16" y="28" width="145.5" height="20.5"/>
+                                <rect key="frame" x="16" y="88" width="145.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="oUx-Cf-7Pb">
-                                <rect key="frame" x="16" y="47" width="343" height="118"/>
+                                <rect key="frame" x="16" y="107" width="343" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="rGy-Ze-JxU"/>
                                 </constraints>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="bottom" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mOv-OC-jNq">
-                                <rect key="frame" x="16" y="173" width="343" height="90"/>
+                                <rect key="frame" x="16" y="233" width="343" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="zpD-gD-ff0"/>
@@ -158,7 +167,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-AV-ma3">
-                                <rect key="frame" x="322" y="263" width="37" height="30"/>
+                                <rect key="frame" x="322" y="323" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="wN9-zX-XLl" eventType="touchUpInside" id="tXH-1o-2m3"/>
@@ -168,15 +177,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="mOv-OC-jNq" secondAttribute="leading" id="0Lh-bf-mZp"/>
+                            <constraint firstItem="rTt-ua-BbX" firstAttribute="leading" secondItem="hiR-lG-P4F" secondAttribute="leading" id="2gI-uN-2QD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="oUx-Cf-7Pb" secondAttribute="leading" id="5S8-Ue-AhQ"/>
+                            <constraint firstItem="rTt-ua-BbX" firstAttribute="top" secondItem="hiR-lG-P4F" secondAttribute="top" id="72B-oJ-dbW"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CFq-Ic-KPx" secondAttribute="leading" id="8zt-np-lNl"/>
                             <constraint firstItem="oUx-Cf-7Pb" firstAttribute="top" secondItem="CFq-Ic-KPx" secondAttribute="centerY" constant="8" id="Ez5-v2-pZ0"/>
                             <constraint firstItem="I8Q-AV-ma3" firstAttribute="top" secondItem="mOv-OC-jNq" secondAttribute="bottomMargin" constant="8" id="YKz-2F-tWO"/>
+                            <constraint firstAttribute="trailing" secondItem="rTt-ua-BbX" secondAttribute="trailing" id="dE0-Yi-BVm"/>
                             <constraint firstItem="mOv-OC-jNq" firstAttribute="top" secondItem="oUx-Cf-7Pb" secondAttribute="bottom" constant="8" id="k5W-47-dao"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oUx-Cf-7Pb" secondAttribute="trailing" id="kDz-at-5wh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I8Q-AV-ma3" secondAttribute="trailing" id="r7Y-cw-4ma"/>
+                            <constraint firstItem="CFq-Ic-KPx" firstAttribute="top" secondItem="rTt-ua-BbX" secondAttribute="bottom" constant="8" id="tbQ-cJ-uGp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mOv-OC-jNq" secondAttribute="trailing" id="uCg-Qv-kpY"/>
-                            <constraint firstItem="CFq-Ic-KPx" firstAttribute="top" secondItem="6kM-r8-6oh" secondAttribute="bottom" constant="8" id="z4r-pn-red"/>
                         </constraints>
                     </view>
                     <connections>
@@ -722,7 +734,7 @@
         <image name="NewGameBtn.png" width="838" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sqh-fT-7Mt"/>
+        <segue reference="UmR-9G-nMD"/>
         <segue reference="Z2a-Dr-uSc"/>
     </inferredMetricsTieBreakers>
 </document>
