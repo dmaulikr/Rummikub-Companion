@@ -128,5 +128,9 @@ class ReviewScoresVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
 }

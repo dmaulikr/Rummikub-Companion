@@ -11,7 +11,9 @@ import AVFoundation
 
 class turnsVC: UIViewController {
     //MARK: Properties
+    @IBOutlet weak var finishRoundBtn: CustomBarBtnItem!
     @IBOutlet weak var countingLabel: UILabel!
+    @IBOutlet weak var backBtn: CustomBarBtnItem!
     
     let turnTime = 120
     var seconds = Int()
@@ -26,9 +28,12 @@ class turnsVC: UIViewController {
 
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         seconds = turnTime
         
-        super.viewDidLoad()
+        //prevent the screen from sleeping
+        UIApplication.shared.isIdleTimerDisabled = true
         
 
     }
@@ -108,6 +113,10 @@ class turnsVC: UIViewController {
     
     @IBAction func finishRoundBtnPressed(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "turnsVCwinnerVC", sender: players)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     

@@ -32,6 +32,7 @@ class calculateScoreVC: UIViewController {
     
     
     
+    
 
     
     //MARK: Methods
@@ -76,7 +77,7 @@ class calculateScoreVC: UIViewController {
     }
     
     @IBAction func jokerBtnPressed(_ sender: UIButton) {
-        addRemainingPiecesForCurrentPlayer(value: 10)
+        addRemainingPiecesForCurrentPlayer(value: 30)
     }
     
     @IBAction func prevBtnPressed(_ sender: UIButton) {
@@ -188,6 +189,9 @@ class calculateScoreVC: UIViewController {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 

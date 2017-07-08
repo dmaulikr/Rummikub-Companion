@@ -44,6 +44,9 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         self.playersNamesTableView.delegate = self
         self.playersNamesTableView.dataSource = self
         
+        //make the keyboard hide
+        self.hideKeyboardWhenTappedAround()
+        
     }
     
     //MARK: PickerView DataSource and Delegate
@@ -118,5 +121,6 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
         }
     }
+    
     
 }
