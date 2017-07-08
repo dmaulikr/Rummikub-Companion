@@ -42,7 +42,8 @@ class winnerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         winner = row
     }
     @IBAction func backBtnPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+        
     }
     @IBAction func calculateRoundScoreBtnPressed(_ sender: UIButton) {
         info = [players, winner]
