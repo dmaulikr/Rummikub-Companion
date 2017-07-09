@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,12 +26,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-3o-Jur">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zuK-3o-Jur" secondAttribute="height" multiplier="375:667" id="Ghp-u9-dIJ"/>
+                                </constraints>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkt-c0-dQO">
-                                <rect key="frame" x="45.5" y="408" width="284" height="54"/>
+                                <rect key="frame" x="46" y="408" width="284" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="284" id="Plz-jT-oQ0"/>
-                                    <constraint firstAttribute="height" constant="54" id="pdN-p6-UVu"/>
+                                    <constraint firstAttribute="width" secondItem="Vkt-c0-dQO" secondAttribute="height" multiplier="142:27" id="JPp-bC-Pil"/>
                                 </constraints>
                                 <state key="normal" image="ContinueBtn.png"/>
                                 <connections>
@@ -38,28 +41,37 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-f3-9Xu">
-                                <rect key="frame" x="45.5" y="346" width="284" height="54"/>
+                                <rect key="frame" x="46" y="346" width="284" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="ONv-U2-FBM"/>
-                                    <constraint firstAttribute="width" constant="284" id="cRi-dK-WMW"/>
+                                    <constraint firstAttribute="width" secondItem="V2D-f3-9Xu" secondAttribute="height" multiplier="142:27" id="5Jn-wU-lUm"/>
                                 </constraints>
                                 <state key="normal" image="NewGameBtn.png"/>
                                 <connections>
                                     <action selector="newGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oh3-fU-Mka"/>
                                 </connections>
                             </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG3-dH-YPA">
+                                <rect key="frame" x="0.0" y="330" width="375" height="8"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zuK-3o-Jur" secondAttribute="trailing" id="2Ib-aC-IJS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zuK-3o-Jur" secondAttribute="bottom" id="2ye-d2-mLy"/>
-                            <constraint firstItem="Vkt-c0-dQO" firstAttribute="top" secondItem="V2D-f3-9Xu" secondAttribute="bottom" constant="8" symbolic="YES" id="8sU-n1-m1k"/>
-                            <constraint firstItem="zuK-3o-Jur" firstAttribute="top" secondItem="V2D-f3-9Xu" secondAttribute="bottom" constant="-400" id="H6A-gs-f8v"/>
-                            <constraint firstItem="zuK-3o-Jur" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="gZA-AM-wUE"/>
-                            <constraint firstItem="V2D-f3-9Xu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gqz-TP-qSj"/>
-                            <constraint firstItem="Vkt-c0-dQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZf-LS-8th"/>
-                            <constraint firstItem="zuK-3o-Jur" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uKP-qS-yhn"/>
-                            <constraint firstItem="V2D-f3-9Xu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yhj-GZ-iGY"/>
+                            <constraint firstItem="OG3-dH-YPA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="310" id="06A-0a-hAC"/>
+                            <constraint firstItem="OG3-dH-YPA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4MC-wc-8Vv"/>
+                            <constraint firstItem="Vkt-c0-dQO" firstAttribute="width" secondItem="V2D-f3-9Xu" secondAttribute="width" id="6qf-i1-ETr"/>
+                            <constraint firstItem="V2D-f3-9Xu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="OPM-gM-hIC"/>
+                            <constraint firstItem="V2D-f3-9Xu" firstAttribute="top" secondItem="OG3-dH-YPA" secondAttribute="bottom" constant="8" id="SIB-zv-n4k"/>
+                            <constraint firstItem="OG3-dH-YPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vn4-61-MoE"/>
+                            <constraint firstAttribute="trailing" secondItem="OG3-dH-YPA" secondAttribute="trailing" id="YL9-hf-vwd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vkt-c0-dQO" secondAttribute="bottom" constant="205" id="ach-IS-Bpq"/>
+                            <constraint firstItem="Vkt-c0-dQO" firstAttribute="centerX" secondItem="V2D-f3-9Xu" secondAttribute="centerX" id="bet-oL-YJG"/>
+                            <constraint firstItem="Vkt-c0-dQO" firstAttribute="top" secondItem="V2D-f3-9Xu" secondAttribute="bottom" constant="8" id="ihV-nR-04J"/>
+                            <constraint firstItem="zuK-3o-Jur" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j3f-SA-lZc"/>
+                            <constraint firstItem="zuK-3o-Jur" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lZ0-jd-m9f"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="V2D-f3-9Xu" secondAttribute="trailing" constant="29" id="mgd-aH-Fc0"/>
+                            <constraint firstAttribute="trailing" secondItem="zuK-3o-Jur" secondAttribute="trailing" id="nUK-oB-WuL"/>
+                            <constraint firstItem="V2D-f3-9Xu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pWq-ck-BV9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zuK-3o-Jur" secondAttribute="bottom" id="sa0-Tu-4ez"/>
                         </constraints>
                     </view>
                     <connections>
@@ -736,7 +748,7 @@
         <image name="NewGameBtn.png" width="838" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Q54-QJ-VWu"/>
         <segue reference="UmR-9G-nMD"/>
-        <segue reference="Z2a-Dr-uSc"/>
     </inferredMetricsTieBreakers>
 </document>
