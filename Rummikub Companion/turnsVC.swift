@@ -38,6 +38,10 @@ class turnsVC: UIViewController {
 
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        resetTimer()
+    }
+    
 
     //MARK: Methods
     @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
@@ -118,6 +122,7 @@ class turnsVC: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     
     
 
