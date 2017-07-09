@@ -136,6 +136,8 @@ class newGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
         }
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
 }
