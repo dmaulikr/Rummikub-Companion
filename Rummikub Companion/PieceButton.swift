@@ -13,9 +13,10 @@ class PieceButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         self.backgroundColor = .clear
-        self.layer.cornerRadius = 0.5 * self.bounds.size.width
+        self.layer.cornerRadius = 40
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor(red:0.13, green:0.45, blue:0.99, alpha:1.0).cgColor
+        self.layer.borderColor = UIColor(red: 0.0039, green: 0.1373, blue: 0.4353, alpha: 1.0).cgColor
+        self.setTitleColor(UIColor(red: 0.0039, green: 0.1373, blue: 0.4353, alpha: 1.0), for: .normal)
         
     }
  
